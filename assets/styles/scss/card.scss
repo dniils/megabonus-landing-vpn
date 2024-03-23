@@ -1,0 +1,66 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 24px 24px 32px;
+  color: #fff;
+  background-color: #1f1f1f;
+  border-radius: 24px;
+  text-wrap: pretty;
+
+  @media screen and (min-width: 992px) {
+    flex-direction: row;
+    padding: 32px 40px 64px;
+    border-radius: 44px;
+    gap: 30px;
+  }
+
+  &__icon {
+    object-fit: contain;
+
+    &_anonymity {
+      width: 44.74px;
+      height: 60px;
+
+      @media screen and (min-width: 992px) {
+        width: 85px;
+        height: 114px;
+      }
+    }
+
+    &_security {
+      width: 55px;
+      height: 46px;
+    }
+  }
+
+  &__content {
+    @media screen and (min-width: 992px) {
+      max-width: 412px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500px;
+
+    @media screen and (min-width: 992px) {
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 600;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 12px;
+
+    @media screen and (min-width: 992px) {
+      margin-top: 16px;
+      line-height: 24px;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+@import "variables", "card";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #edf2fa;
+  color: #1f1f1f;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.module {
+  padding: 40px 16px 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin: 0 auto;
+  max-width: 1440px;
+
+  @media screen and (min-width: 992px) {
+    gap: 60px;
+    padding: 80px 72.5px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 80px;
+  }
+
+  &__title,
+  &__description {
+    text-align: center;
+
+    @media screen and (min-width: 1440px) {
+      text-align: unset;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 992px) {
+      margin-bottom: 12px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__description {
+    color: #6f7685;
+    line-height: 20px;
+    max-width: 290px;
+
+    @media screen and (min-width: 1440px) {
+      padding-left: 28px;
+      position: relative;
+      max-width: 330px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url("assets/images/star.svg");
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+
+  @media screen and (min-width: 992px) {
+    max-width: 845px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .card {
+    &:nth-child(1) {
+      color: inherit;
+      background-color: #fff;
+      flex: 1 1 0;
+
+      .card__title {
+        font-size: 20px;
+        line-height: 28px;
+
+        @media screen and (min-width: 992px) {
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 38.73px;
+        }
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      @media screen and (min-width: 992px) {
+        max-width: 302px;
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: #354b7e;
+    }
+
+    &:nth-child(3) {
+      position: relative;
+      background-color: #1f1f1f;
+      background: radial-gradient(
+        circle at right bottom,
+        rgba(140, 70, 92, 1) 0%,
+        rgba(56, 70, 123, 1) 30%,
+        rgba(31, 31, 31, 1) 60%
+      );
+    }
+
+    &:nth-child(4) {
+      background-color: #6f7685;
+      flex: 1 1 0;
+
+      @media screen and (min-width: 992px) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &:nth-child(5) {
+      background-color: #1f1f1f;
+      flex-grow: 1;
+
+      @media screen and (min-width: 992px) {
+        padding-bottom: 32px;
+      }
+    }
+  }
+}
