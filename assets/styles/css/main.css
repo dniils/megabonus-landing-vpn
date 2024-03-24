@@ -1,21 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+:root {
+  --white: #fff;
+  --gray: #6f7685;
+  --blue-100: #edf2fa;
+  --blue-200: #354b7e;
+  --black: #1f1f1f;
+  --fs-s: 14px;
+  --fs-m: 16px;
+  --fs-l: 20px;
+  --fs-xl: 32px;
+  --lh-s: 20px;
+  --lh-m: 24px;
+  --lh-l: 28px;
+  --lh-xl: 38.73px;
+}
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
   padding: 24px 24px 32px;
-  color: #fff;
-  background-color: #1f1f1f;
+  color: var(--white);
+  background-color: var(--black);
   border-radius: 24px;
   text-wrap: pretty;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 576px) {
   .card {
     flex-direction: row;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card {
     padding: 32px 40px 64px;
     border-radius: 44px;
-    gap: 30px;
   }
 }
 .card__icon {
@@ -29,6 +49,8 @@
   .card__icon_anonymity {
     width: 85px;
     height: 114px;
+    margin-top: 5px;
+    margin-right: 10px;
   }
 }
 .card__icon_security {
@@ -41,26 +63,26 @@
   }
 }
 .card__title {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500px;
+  font-size: var(--fs-m);
+  line-height: var(--lh-m);
+  font-weight: 600;
 }
 @media screen and (min-width: 992px) {
   .card__title {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: var(--fs-l);
+    line-height: var(--lh-l);
     font-weight: 600;
   }
 }
 .card__text {
-  font-size: 16px;
-  line-height: 20px;
+  line-height: var(--lh-s);
   margin-top: 12px;
 }
 @media screen and (min-width: 992px) {
   .card__text {
+    font-size: var(--fs-m);
     margin-top: 16px;
-    line-height: 24px;
+    line-height: var(--lh-m);
   }
 }
 
@@ -71,9 +93,9 @@
 }
 
 body {
-  background-color: #edf2fa;
-  color: #1f1f1f;
-  font-size: 14px;
+  background-color: var(--blue-100);
+  color: var(--black);
+  font-size: var(--fs-s);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -112,8 +134,8 @@ body {
   }
 }
 .module__title {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: var(--fs-l);
+  line-height: var(--lh-l);
   margin-bottom: 8px;
 }
 @media screen and (min-width: 992px) {
@@ -127,8 +149,8 @@ body {
   }
 }
 .module__description {
-  color: #6f7685;
-  line-height: 20px;
+  color: var(--gray);
+  line-height: var(--lh-s);
   max-width: 290px;
 }
 @media screen and (min-width: 1440px) {
@@ -165,18 +187,18 @@ body {
 }
 .cards-container .card:nth-child(1) {
   color: inherit;
-  background-color: #fff;
+  background-color: var(--white);
   flex: 1 1 0;
 }
 .cards-container .card:nth-child(1) .card__title {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: var(--fs-l);
+  line-height: var(--lh-l);
 }
 @media screen and (min-width: 992px) {
   .cards-container .card:nth-child(1) .card__title {
-    font-size: 32px;
+    font-size: var(--fs-xl);
     font-weight: 700;
-    line-height: 38.73px;
+    line-height: var(--lh-xl);
   }
 }
 @media screen and (min-width: 992px) {
@@ -185,28 +207,29 @@ body {
   }
 }
 .cards-container .card:nth-child(2) {
-  background-color: #354b7e;
+  background-color: var(--blue-200);
 }
 .cards-container .card:nth-child(3) {
   position: relative;
-  background-color: #1f1f1f;
-  background: radial-gradient(circle at right bottom, rgb(140, 70, 92) 0%, rgb(56, 70, 123) 30%, rgb(31, 31, 31) 60%);
+  background-color: var(--black);
+  background: radial-gradient(circle at right bottom, rgb(140, 70, 92) 15%, rgb(56, 70, 123) 40%, rgb(31, 31, 31) 60%);
 }
 .cards-container .card:nth-child(4) {
-  background-color: #6f7685;
+  background-color: var(--gray);
   flex: 1 1 0;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 576px) {
   .cards-container .card:nth-child(4) {
     flex-direction: row-reverse;
   }
 }
 .cards-container .card:nth-child(5) {
-  background-color: #1f1f1f;
+  background-color: var(--black);
   flex-grow: 1;
 }
 @media screen and (min-width: 992px) {
   .cards-container .card:nth-child(5) {
+    align-items: center;
     padding-bottom: 32px;
   }
 }

@@ -8,9 +8,9 @@
 }
 
 body {
-  background-color: #edf2fa;
-  color: #1f1f1f;
-  font-size: 14px;
+  background-color: var(--blue-100);
+  color: var(--black);
+  font-size: var(--fs-s);
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -48,8 +48,8 @@ body {
   }
 
   &__title {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: var(--fs-l);
+    line-height: var(--lh-l);
     margin-bottom: 8px;
 
     @media screen and (min-width: 992px) {
@@ -62,8 +62,8 @@ body {
   }
 
   &__description {
-    color: #6f7685;
-    line-height: 20px;
+    color: var(--gray);
+    line-height: var(--lh-s);
     max-width: 290px;
 
     @media screen and (min-width: 1440px) {
@@ -101,17 +101,17 @@ body {
   .card {
     &:nth-child(1) {
       color: inherit;
-      background-color: #fff;
+      background-color: var(--white);
       flex: 1 1 0;
 
       .card__title {
-        font-size: 20px;
-        line-height: 28px;
+        font-size: var(--fs-l);
+        line-height: var(--lh-l);
 
         @media screen and (min-width: 992px) {
-          font-size: 32px;
+          font-size: var(--fs-xl);
           font-weight: 700;
-          line-height: 38.73px;
+          line-height: var(--lh-xl);
         }
       }
     }
@@ -124,34 +124,35 @@ body {
     }
 
     &:nth-child(2) {
-      background-color: #354b7e;
+      background-color: var(--blue-200);
     }
 
     &:nth-child(3) {
       position: relative;
-      background-color: #1f1f1f;
+      background-color: var(--black);
       background: radial-gradient(
         circle at right bottom,
-        rgba(140, 70, 92, 1) 0%,
-        rgba(56, 70, 123, 1) 30%,
-        rgba(31, 31, 31, 1) 60%
+        rgb(140, 70, 92) 15%,
+        rgb(56, 70, 123) 40%,
+        rgb(31, 31, 31) 60%
       );
     }
 
     &:nth-child(4) {
-      background-color: #6f7685;
+      background-color: var(--gray);
       flex: 1 1 0;
 
-      @media screen and (min-width: 992px) {
+      @media screen and (min-width: 576px) {
         flex-direction: row-reverse;
       }
     }
 
     &:nth-child(5) {
-      background-color: #1f1f1f;
+      background-color: var(--black);
       flex-grow: 1;
 
       @media screen and (min-width: 992px) {
+        align-items: center;
         padding-bottom: 32px;
       }
     }
